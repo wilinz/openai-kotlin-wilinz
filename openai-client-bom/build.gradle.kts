@@ -14,3 +14,19 @@ dependencies {
         api(libs.ktor.client.okhttp)
     }
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            register("release", MavenPublication::class) {
+                // Applies the component for the release build variant.
+                from(components.getByName("release"))
+                // You can then customize attributes of the publication as shown below.
+                groupId = "com.github.wilinz"
+                artifactId = "openai-client-bom"
+                version = "3.3.3"
+            }
+        }
+    }
+}
