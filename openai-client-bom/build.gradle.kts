@@ -1,5 +1,5 @@
 plugins {
-    id("com.vanniktech.maven.publish")
+    id("maven-publish")
     id("java-platform")
 }
 

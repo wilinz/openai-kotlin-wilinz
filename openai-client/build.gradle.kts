@@ -1,7 +1,7 @@
 plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
-    id("com.vanniktech.maven.publish")
+    id("maven-publish")
     id("binary-compatibility-validator")
     id("com.diffplug.spotless")
     id("org.jetbrains.dokka")
